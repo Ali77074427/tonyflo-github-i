@@ -390,6 +390,17 @@
         <button>Sign in with Google</button>
     </form>
 </section>
+        document.getElementById('loginForm').addEventListener('submit', function(event) {
+  event.preventDefault();
+  
+  var username = document.getElementById('username').value;
+  var password = document.getElementById('password').value;
+  
+  // تخزين اسم المستخدم
+  localStorage.setItem('username', username);
+  
+  alert('Login successful!');
+});
 
 <!-- Contact Information Section -->
 <section id="contact" style="background-color:black; padding: 20px; text-align: left; position: relative;">
